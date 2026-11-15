@@ -23,7 +23,7 @@
         const heroHeadlineMain = heroHeadline.querySelector(".hero-headline-main");
         const heroHeadlineSubline = heroHeadline.querySelector(".hero-headline-subline");
         const headlinePhrases = [
-            { main: "Making sense of the", subline: "signal" },
+            { main: "Making sense of", subline: "the signal" },
             { main: "and", subline: "..." },
             { main: "Turning raw logs", subline: "into clear threat narratives." },
             
