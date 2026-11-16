@@ -24,8 +24,9 @@
         const heroHeadlineSubline = heroHeadline.querySelector(".hero-headline-subline");
         const headlinePhrases = [
             { main: "Making sense of", subline: "the signal" },
-            { main: "and", subline: "..." },
-            { main: "Turning raw logs", subline: "into clear threat narratives." },
+            { main: "and Turning ", subline: "raw logs" },
+            { main: "into clear", subline: " threat narratives." },
+
             
         ];
 
@@ -58,8 +59,13 @@
                     await eraseText(heroHeadlineSubline);
                     await eraseText(heroHeadlineMain);
                     activePhrase = (activePhrase + 1) % headlinePhrases.length;
-                    await typeText(heroHeadlineMain, headlinePhrases[activePhrase].main);
-                    await typeText(heroHeadlineSubline, headlinePhrases[activePhrase].subline);
+                    const phrase = headlinePhrases[activePhrase];
+                    await typeText(heroHeadlineMain, phrase.main);
+                    if (phrase.animateSubline === false) {
+                        heroHeadlineSubline.textContent = phrase.subline;
+                    } else {
+                        await typeText(heroHeadlineSubline, phrase.subline);
+                    }
                 }
             };
 
