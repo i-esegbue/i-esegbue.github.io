@@ -218,25 +218,6 @@
             white-space: nowrap;
         }
 
-        .hero-headline-main.is-typing::after,
-        .hero-headline-subline.is-typing::after {
-            display: inline-block;
-            width: 0.07em;
-            height: 0.78em;
-            margin-left: 0.08em;
-            background: #83b84f;
-            box-shadow: 0 0 10px rgb(147 209 78 / 45%);
-            content: "";
-            vertical-align: -0.04em;
-            animation: typing-caret 0.8s steps(1, end) infinite;
-        }
-
-        @keyframes typing-caret {
-            50% {
-                opacity: 0;
-            }
-        }
-
         .hero-copy {
             max-width: 450px;
             margin-bottom: 1.25rem;
@@ -958,10 +939,5 @@
             *::after {
                 scroll-behavior: auto !important;
                 transition-duration: 0.01ms !important;
-            }
-
-            .hero-headline-main.is-typing::after,
-            .hero-headline-subline.is-typing::after {
-                animation: none;
             }
         }
