@@ -638,6 +638,44 @@
             line-height: 1.9;
         }
 
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .certification-card {
+            min-height: 210px;
+            padding: 1.75rem;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--white);
+        }
+
+        .certification-provider {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            color: var(--green-dark);
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .certification-card h3 {
+            margin-bottom: 0.65rem;
+            font-size: 1.25rem;
+            letter-spacing: -0.035em;
+        }
+
+        .certification-card p {
+            max-width: 520px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
         .contact-section {
             padding: 6.5rem 0;
         }
@@ -890,7 +928,8 @@
             }
 
             .project-grid,
-            .about-grid {
+            .about-grid,
+            .certifications-grid {
                 grid-template-columns: 1fr;
             }
 
